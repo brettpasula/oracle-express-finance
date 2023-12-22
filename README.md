@@ -17,6 +17,10 @@ The application expects the following to be defined:
 - `ORACLE_PASSWORD`: the password for the user in `ORACLE_USER`
 - `CONNECTION_STRING`: the connection string from the Oracle Cloud console (it should look something like `(description= (retry_count=X)(retry_delay=Y)...)`)
 
+### Formatting SQL 
+
+The easiest way to format (and quickly test) your SQL is to use SQL Developer. Format the SQL in the application, copy and paste it into a multi-line string using backticks (`).
+
 ### References
 
 [Developing Node.js Applications for Oracle Autonomous Database](https://www.oracle.com/database/technologies/appdev/quickstartnodejs.html#windows-tab)
