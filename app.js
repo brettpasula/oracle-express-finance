@@ -22,12 +22,20 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+var server = app.listen(port, () => {
+  console.log(`Sitchensis is listening on port ${port}...`);
 });
 
-process.on('SIGTERM', () => {
-
+process.on("SIGINT", () => {
+  server.close(async () => {
+    try {
+      console.log("Sitchensis is shutting down ...");
+      await oracledb.getPool().close(0);
+      console.log("... done. Goodbye!");
+    } catch (e) {
+      throw e;
+    }
+  });
 });
 
 export default pool;
