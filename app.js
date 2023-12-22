@@ -26,7 +26,7 @@ var server = app.listen(port, () => {
   console.log(`Sitchensis is listening on port ${port}...`);
 });
 
-process.on("SIGINT", () => {
+process.on("SIGINT" || "SIGTERM", () => {
   server.close(async () => {
     try {
       console.log("Sitchensis is shutting down ...");

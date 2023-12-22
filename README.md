@@ -25,3 +25,4 @@ The easiest way to format (and quickly test) your SQL is to use SQL Developer. F
 
 [Developing Node.js Applications for Oracle Autonomous Database](https://www.oracle.com/database/technologies/appdev/quickstartnodejs.html#windows-tab)
 [Connecting to Oracle Database](https://node-oracledb.readthedocs.io/en/latest/user_guide/connection_handling.html)
+[Health Checks and Graceful Shutdown](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html)
