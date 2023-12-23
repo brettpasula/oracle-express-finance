@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
 FROM
          ACCOUNT A
     JOIN CREDIT C ON C.ACCOUNT_ID = A.ID`);
-    res.send(result.rows);
+    res.json(JSON.stringify(result.rows));
   } catch (error) {
     console.error(error);
   } finally {
