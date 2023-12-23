@@ -15,6 +15,8 @@ let pool = await oracledb.createPool({
   connectionString: process.env.CONNECTION_STRING,
 });
 
+oracledb.outFormat = oracledb.OBJECT;
+
 app.use("/api/account", account);
 app.use("/api/credit", credit);
 
@@ -26,7 +28,7 @@ var server = app.listen(port, () => {
   console.log(`Sitchensis is listening on port ${port}...`);
 });
 
-process.on("SIGINT" || "SIGTERM", () => {
+process.on("SIGTERM", () => {
   server.close(async () => {
     try {
       console.log("Sitchensis is shutting down ...");
